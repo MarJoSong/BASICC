@@ -22,8 +22,8 @@ int main() {
   PRINTLNF("New Thread return:[%d]", res);
 #else
   thrd_detach(newthred);
-#endif
   thrd_sleep(&(struct timespec){.tv_sec = 0, .tv_nsec = 1000000000}, NULL);
+#endif
 
   //thrd_yield();放弃CPU时间片
 

@@ -59,7 +59,9 @@ int main(void) {
   if (s != 0)
     handle_error_en(s, "pthread_cancel");
 
-  /* Join with thread to see what its exit status was */
+  /* Join with thread to see what its exit status was
+   * Joining with a thread is only way to know that cancellation has completed.
+   */
 
   s = pthread_join(thr, &res);
   if (s != 0)
